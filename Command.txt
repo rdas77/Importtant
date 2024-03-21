@@ -1,0 +1,290 @@
+To load bhavcopy ..
+
+python D:\EagleEye\Script\load_bhavcopy.py -LB cm02JAN2023bhav.csv
+
+python D:\EagleEye\Script\load_bhavcopy.py -LB cm31MAR2023bhav.csv
+
+python D:\EagleEye\Script\load_bhavcopy.py -LB 
+
+python D:\EagleEye\Script\load_bhavcopy_A01.py -LB 20-03-2024
+
+select * from daily_nse_all where symbol='IEX' 
+AND DATE1  >= TO_DATE('22-NOV-23') ORDER BY DATE1 
+
+top gainer
+https://www.nseindia.com/market-data/top-gainers-losers
+
+streamlit run streamlit_1.py
+streamlit run streamlit_UI.py
+streamlit run streamlit_UI_A02.py
+streamlit run streamlit__matlibplot.py
+ 
+select * from  BATCH_BUY_SELL_SEQ_NEW_V where substr(BUYER_SELLER,4) >3000 order by to_number(trim(CUL_WEIGHT_N)) desc
+select * from daily_nse_all where symbol='EXIDEIND' 
+AND DATE1 > TO_DATE('31-JUL-23') ORDER BY DATE1
+
+9643156229 --singhla sir whatsapp number
+
+
+gitlab https://github.com/rdas77/EagleEye
+
+data frame to oracle 
+
+https://www.mongodb.com/blog/post/working-together-mongodbs-partner-year-awards
+
+--------------------------------------------------
+
+
+
+
+STREMLIT DASH BAORD
+
+https://blog.desaihetav.com/covid-19-dashboard-in-python-using-streamlit
+
+Welcome to EagleEye decision making performed using ML and price action 
+
+
+
+
+
+
+
+
+
+||'~EagleEyeBP'||trunc(:NEW.LASTPRICE_N+:NEW.LASTPRICE_N*.01),2)|| '~ESP'||trunc(:NEW.LASTPRICE_N-:NEW.LASTPRICE_N*.01),2)||'Buyer_seller'||:new.buyer_seller_per_lakh_n
+
+
+python D:\EagleEye\Script\load_bhavcopy.py -LB sec_bhavdata_full_31032023.csv
+https://chat.whatsapp.com/B7jDGP6RbwMAWAnoKEmvq4
+
+LINK IS ----https://www1.nseindia.com/products/content/equities/equities/archieve_eq.htm
+
+
+SELECT * FROM BATCH_BUY_SELL_VW_H
+
+EXECUTE pkg_buysellview_hist.SET_date('05-JUL-23');
+
+https://www.sejda.com/pdf-editor
+
+WHERE SEQ_N=25 ORDER BY CUL_WEIGHT_N DESC
+
+PDF editor
+
+Bulk SMS options..
+
+https://www.fast2sms.com/dashboard/dev-api
+
+
+https://www.geeksforgeeks.org/send-sms-with-rest-using-python/
+
+
+TO RESLOVE THE NETWORK ISSUE ..
+
+BEGIN
+  DBMS_NETWORK_ACL_ADMIN.CREATE_ACL (
+  acl => 'Connect_Access.xml',
+  description => 'Connect Network',
+  principal => 'HR',
+  is_grant => TRUE,
+  privilege => 'resolve',
+  start_date => NULL,
+  end_date => NULL);
+END;
+
+https://www.fast2sms.com/dashboard/dev-api
+
+--------------------
+
+https://signup.sendgrid.com/
+
+username 
+
+password Soma@1234567890!
+
+
+EagleEyeAPI ---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
+
+EagleEyeAPI -----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
+
+
+--------------
+SELECT TRUNC(OPEN_PRICE+OPEN_PRICE*.02 ,2) BPRICE,TRUNC(OPEN_PRICE-OPEN_PRICE*.02 ,2) SLPRICE, LAST_PRICE_N   PCT, LAST_PCT, WR, WEIGHT_N, CUL_WEIGHT_N,PCT_W, RATIO_F_V, OPEN_PRICE, MAX_PRICE_N, MIN_PRICE_N, PREV_CLOSE,  SL_N,MAX_PRICE_N-SL_N MAX_SL_DIF_N,SPEED,
+ LASTPRICE_N-SL_N B_SL_N , LASTPRICE_N+ SL_N S_SL_N,LAST_AVG_PRICE_N, BUYER_SELLER, SYMBOL, LAST_UPDATE_DT_TIME, SEQ_N, SHORT_LONG_FLAG_V, SHORT_LONG_VIR_FLAG_V, BUYER_SELLER_PER_LAKH_N, PCT5_TRANS_TOT, TOTALTRADEDVOL_N FROM  
+ (SELECT trunc(((OPEN_PRICE-PREV_CLOSE)/PREV_CLOSE)*100,2) pct, trunc(((LASTPRICE_N-PREV_CLOSE)/PREV_CLOSE)*100,2) LAST_pct,
+  TRUNC((WEIGHT_N)/(BUYER_SELLER_PER_LAKH_N)) WR, WEIGHT_N,CUL_WEIGHT_N,
+TRUNC(BUY_SIGNAL_VALUE_N) SPEED, TRUNC(cul_weight_n/(LASTPRICE_N*100),2)PCT_W,
+RATIO_F_V,OPEN_PRICE,a.MAX_PRICE_N,MIN_PRICE_N, PREV_CLOSE ,LASTPRICE_N,
+ROUND ((cul_weight_n/100)/ CASE WHEN  (cul_weight_n/LASTPRICE_N)=0 THEN
+ .1 ELSE (cul_weight_n/LASTPRICE_N) END ,2) sl_n, LAST_AVG_PRICE_N,
+                 CASE WHEN LAST_AVG_PRICE_N > LASTPRICE_N THEN
+                 'S->'||BUYER_SELLER_PER_LAKH_N
+                 ELSE
+                 'B->'||BUYER_SELLER_PER_LAKH_N
+                 END   BUYER_SELLER,  A.SYMBOL, TO_CHAR(LAST_UPDATE_DT,'DD-MON-YY HH24:MI') LAST_UPDATE_DT_TIME,  
+                 DAILY_BATCH_SEQ_N SEQ_N, SHORT_LONG_FLAG_V, SHORT_LONG_VIR_FLAG_V,BUYER_SELLER_PER_LAKH_N,A.PCT5_TRANS_TOT,TOTALTRADEDVOL_N
+FROM DAILY_NSE_MOVEMENT_TRANS A, FIVEDAYS_AVG_TBL B WHERE  
+ BUYER_SELLER_PER_LAKH_N>0 AND BUYER_SELLER_PER_LAKH_N IS NOT NULL AND
+A.SYMBOL=B.SYMBOL 
+order by  5 desc,4 desc)
+
+CHECK THE VIEW ..
+BATCH_BUY_SELL_SEQ
+------------------
+
+SENDING MAIL ..
+
+https://onboarding.sendinblue.com/account/register/verify
+
+--------------
+
+https://jupyter.org/try-jupyter/retro/notebooks/?path=Untitled.ipynb
+
+jupitor note book..
+
+
+
+-------Videos -----
+https://www.youtube.com/watch?v=vYHh9vNHwIU
+
+
+Mongo Db sibngle instance adminstrations ..
+
+At 3:54 the speaker says "YAML stands for Yet Another Markup Language". This acronym has been updated to "YAML Ain't Markup Language".
+
+See MongoDB documentation for more information about command line options and configuration file options.
+
+Lecture Instructions
+
+These lecture instructions are not meant to be reproduced in your environment. They reflect what you will see in the lecture video. However, they may point to non-existing resources and files.
+
+Launch mongod using default configuration:
+
+mongod
+Launch mongod with specified --dbpath and --logpath:
+
+mongod --dbpath /data/db --logpath /data/log/mongod.log
+Launch mongod and fork the process:
+
+mongod --dbpath /data/db --logpath /data/log/mongod.log --fork
+Launch mongod with many configuration options:
+
+Note that all "ssl" options have been edited to use "tls" instead. As of MongoDB 4.2, options using "ssl" have been deprecated.
+
+mongod --dbpath /data/db --logpath /data/log/mongod.log --fork --replSet "M103" --keyFile /data/keyfile --bind_ip "127.0.0.1,192.168.103.100" --tlsMode requireTLS --tlsCAFile "/etc/tls/TLSCA.pem" --tlsCertificateKeyFile "/etc/tls/tls.pem"
+Example configuration file, with the same configuration options as above:
+
+storage:
+  dbPath: "/data/db"
+systemLog:
+  path: "/data/log/mongod.log"
+  destination: "file"
+replication:
+  replSetName: M103
+net:
+  bindIp : "127.0.0.1,192.168.103.100"
+tls:
+  mode: "requireTLS"
+  certificateKeyFile: "/etc/tls/tls.pem"
+  CAFile: "/etc/tls/TLSCA.pem"
+security:
+  keyFile: "/data/keyfile"
+processManagement:
+  fork: true
+  
+  
+
+
+mongo Db videos ..
+
+storage:
+  dbPath: "/data/db"
+systemLog:
+  path: "/data/log/mongod.log"
+  destination: "file"
+replication:
+  replSetName: M103
+net:
+  bindIp : "127.0.0.1,192.168.103.100"
+tls:
+  mode: "requireTLS"
+  certificateKeyFile: "/etc/tls/tls.pem"
+  CAFile: "/etc/tls/TLSCA.pem"
+security:
+  keyFile: "/data/keyfile"
+processManagement:
+  fork: true
+  
+  ------
+
+"""
+C:\Windows\system32>pip install statsmodels
+Collecting statsmodels
+  Downloading statsmodels-0.14.1-cp311-cp311-win_amd64.whl.metadata (9.8 kB)
+Requirement already satisfied: numpy<2,>=1.18 in c:\users\admin\appdata\local\programs\python\python311\lib\site-packages (from statsmodels) (1.24.2)
+Requirement already satisfied: scipy!=1.9.2,>=1.4 in c:\users\admin\appdata\local\programs\python\python311\lib\site-packages (from statsmodels) (1.10.1)
+Requirement already satisfied: pandas!=2.1.0,>=1.0 in c:\users\admin\appdata\local\programs\python\python311\lib\site-packages (from statsmodels) (1.5.3)
+Collecting patsy>=0.5.4 (from statsmodels)
+  Downloading patsy-0.5.6-py2.py3-none-any.whl.metadata (3.5 kB)
+Requirement already satisfied: packaging>=21.3 in c:\users\admin\appdata\local\programs\python\python311\lib\site-packages (from statsmodels) (23.0)
+Requirement already satisfied: python-dateutil>=2.8.1 in c:\users\admin\appdata\local\programs\python\python311\lib\site-packages (from pandas!=2.1.0,>=1.0->statsmodels) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in c:\users\admin\appdata\local\programs\python\python311\lib\site-packages (from pandas!=2.1.0,>=1.0->statsmodels) (2022.7)
+Requirement already satisfied: six in c:\users\admin\appdata\local\programs\python\python311\lib\site-packages (from patsy>=0.5.4->statsmodels) (1.16.0)
+Downloading statsmodels-0.14.1-cp311-cp311-win_amd64.whl (9.9 MB)
+   ---------------------------------------- 9.9/9.9 MB 17.0 MB/s eta 0:00:00
+Downloading patsy-0.5.6-py2.py3-none-any.whl (233 kB)
+   ---------------------------------------- 233.9/233.9 kB 14.9 MB/s eta 0:00:00
+Installing collected packages: patsy, statsmodels
+Successfully installed patsy-0.5.6 statsmodels-0.14.1
+"""
+  
+My Mistakes  -20
+1. Never ever take decesion blindly without having data .-No data no work ..
+2. if selling region if it violates eagale eye criteria then stop selling .
+3. Min price violations means heaps is going to strong.
+4. Heaps lies on 1%+ region 
+5. if open price -2% pct in negati ve region then sell it immediately .
+6. when ur right never lose patitent donot freak always 
+7. after 11 oclock never touch considering the heap 
+8. when it is buying region if it is open eq min then if max price violates sell it .
+9. yesterdays buying price then only do something 
+10.if is NZ never ever short in min price region.
+11.when ur not able understaND open price BREAK if is positive region .
+12.when i am doing scalping please always remove as soon .
+13. never ever relases everything leave somthing future investment .
+14.
+
+select SYMBOL,  DATE1, TRUNC( (OPEN_PRICE-PREV_CLOSE)/(OPEN_PRICE) *100,2) PCT,
+PREV_CLOSE, OPEN_PRICE, HIGH_PRICE,
+LOW_PRICE, LAST_PRICE, CLOSE_PRICE, AVG_PRICE 
+from daily_nse_all where symbol='INDIACEM'
+AND DATE1  >= TO_DATE('27-DEC-23') ORDER BY DATE1 
+
+30-NOV HIGH INDIACEM 01 DEC 5000
+01 DEC - DELTACROP 04 DEC 5000
+04 DEC- ECICHERMOT 05 DEC NONE 
+05 DEC ADANIPORTS  06 DEC 5000
+06 DEC TATACHECM 07 DEC -5000
+07 DEC BALRAMCHINI 08 DEC 5000
+08 DEC GMRINFRA    11 DEC 5000
+11 DEC GMRINFRA    12 DEC 5000
+12 DEC HDFCLIFE    13 DEC -5000
+13 DEC RECLTD      14 DEC 5000
+14 DEC INDUSTOWER  15 DEC 5000
+15 DEC DEEPAK      18 DEC 1000
+18 DEC IRCTC       19 DEC 5000
+19 DEC APOLLOTYRE  20 DEC 5000
+20 DEC VOLTAS      21 DEC 5000
+21 DEC METROPOLIS  22 DEC 5000
+22 DEC GAIL        26 DEC 5000
+26 DEC TATACHEM    27 DEC 1000
+27 DEC INDIACEM    28 DEC 5000
+
+https://www.herocycles.com/new-voltage-BSVOL24BKGN008_main.html
+
+
+https://www.udemy.com/course/snowflake-masterclass/learn/lecture/34815660#overview
+
+Snowflake account rdas77/Soma@123456
+
+Username: RDAS77
+Dedicated Login URL: https://nfgslkq-ks61747.snowflakecomputing.com
